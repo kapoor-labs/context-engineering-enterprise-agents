@@ -1,0 +1,7 @@
+# Shared baseline for Python-based chapter folders.
+# Each chapter folder ALSO has its own requirements.txt pinning exact versions —
+# that folder-level file is authoritative for running that chapter's example.
+# This root file is only a convenience baseline for browsing/linting the whole repo.
+
+python-dotenv
+pytest

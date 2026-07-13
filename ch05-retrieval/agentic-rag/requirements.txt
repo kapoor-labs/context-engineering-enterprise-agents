@@ -1,0 +1,3 @@
+# Pin exact versions here before publishing.
+# python-dotenv==
+# anthropic==
