@@ -1,3 +1,11 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
-# anthropic==
+# Chapter 8 — compaction, tool-result clearing, and probe-question testing.
+#
+# Dependency-free: the demo and tests run on the Python standard library alone
+# (the compactors are deterministic simulations of LLM behaviour, for offline
+# verification). There is nothing to pip install.
+#
+# A production pipeline would drive compaction with a real model, e.g.:
+#
+#   anthropic>=0.40
+#
+# (left commented so this folder verifies with a clean, empty environment).
