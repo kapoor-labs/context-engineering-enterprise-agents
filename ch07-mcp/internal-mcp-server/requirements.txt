@@ -1,0 +1,12 @@
+# Chapter 7 — internal OrderCore MCP server.
+#
+# This example is intentionally dependency-free: it speaks MCP's JSON-RPC 2.0
+# wire protocol over stdio using only the Python standard library, so it runs
+# offline with no installs. There is nothing to pip install.
+#
+# A production server would build on the official MCP Python SDK instead of
+# hand-rolling the transport:
+#
+#   mcp>=1.0
+#
+# (left commented so this folder verifies with a clean, empty environment).
