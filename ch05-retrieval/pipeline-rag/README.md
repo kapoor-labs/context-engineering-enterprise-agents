@@ -1,38 +1,44 @@
-# Pipeline Rag
+# Pipeline RAG
 
 > Accompanies the book — Chapter 5, "Retrieval Architectures" — the baseline pattern
 
 ## What this demonstrates
 
-A minimal pipeline RAG implementation: embed a query, retrieve top-k chunks, insert into context, generate. No planning or self-correction loop — this is the baseline the chapter compares agentic RAG and GraphRAG against.
+The baseline pipeline RAG pattern (chunk → embed → top-k → generate), including a
+reproduction of the chapter's **2019-policy incident**: a naive "index everything" corpus
+confidently retrieves a stale, superseded policy. The demo then applies the chapter's two
+fixes — an editorial gate on what enters the index, and metadata carried on every chunk —
+and shows the same query retrieving the current policy with its provenance attached.
 
 ## Prerequisites
 
 - Python 3.11+
-- A vector store (local FAISS index by default)
+- Nothing else — the default run is standard-library only. The "embedding" is a
+  bag-of-words vector standing in for a real embedding model; the stale-retrieval failure
+  it demonstrates is a property of similarity search itself, not of the simplification.
 
-Copy `.env.example` to `.env` in this folder and fill in your own values before running
-anything. Never commit a real `.env` file.
+No keys are needed for the default run. `.env.example` is provided for the extension
+exercise of wiring in a real embedding model and model call — copy it to `.env` and fill
+in your own values if you do; never commit a real `.env` file.
 
 ## How to run
 
 ```bash
-pip install -r requirements.txt --break-system-packages
 python main.py
 ```
 
-See the inline comments in the code for the concept-to-code mapping referenced from the
-manuscript.
+The first block of output is the incident (the 2019 policy wins the similarity contest);
+the second block is the fixed pipeline. See the inline comments for the concept-to-code
+mapping referenced from the manuscript.
 
 ## Versions
 
 | Package | Version | Last verified |
 |---|---|---|
-| _(fill in before publishing)_ | | 2026-07 |
+| Python (standard library only) | 3.11+ (tested on 3.14.0) | 2026-07-19 |
 
 ## Scope note
 
-Per the book's repo conventions: this folder contains the full runnable implementation,
-including error handling, retries, and logging that the manuscript's inline snippet omits
-for brevity. If you're looking for the short version that matches the book's printed code
-block, check that chapter's text first — this is the "make it actually run" version.
+Per the book's repo conventions: this folder is the runnable counterpart to the chapter's
+pipeline RAG section. The chapter's single inline snippet is the query router; the three
+architecture implementations, including this one, live here in the repo.

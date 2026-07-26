@@ -4,35 +4,50 @@
 
 ## What this demonstrates
 
-The same memory concepts implemented against Microsoft Foundry Agent Service's procedural/user/session memory (public preview at time of writing — check GA status before relying on this in production).
+The mapping from the chapter's memory taxonomy (working / episodic / semantic /
+procedural) onto **Microsoft Foundry Agent Service's** native memory scopes (session /
+user / procedural), including the gap the chapter's Azure sidebar warns about: Foundry's
+*session memory* is a working-memory shadow within a session, **not** a per-customer
+episodic contact history — if you need Chapter 6's episodic memory, you build and govern
+that store yourself (see `../minimal-tiered-memory/` and the chapter's Dataverse
+discussion). Also prints an illustrative agent-memory configuration shape, including
+Northwind's decision to keep procedural self-update *disabled* in favor of a human
+review gate (Chapters 4 and 6).
+
+## Capability status — read this first
+
+Foundry Agent Service agent memory was in **public preview** at the time of writing
+(announced Build 2026). Preview APIs change. This folder therefore ships only what is
+stable — the taxonomy mapping and configuration shape, printed locally and
+deterministically — and deliberately contains **no preview SDK calls** that would rot
+before you run them. For the live walkthrough, follow the current Microsoft Learn
+quickstart for Foundry agent memory with your own Foundry project:
+https://learn.microsoft.com/azure/foundry/ (search "agent memory"). Verify GA status
+before relying on any of this in production.
 
 ## Prerequisites
 
-- Python 3.11+
-- Azure subscription with Microsoft Foundry access
-
-Copy `.env.example` to `.env` in this folder and fill in your own values before running
-anything. Never commit a real `.env` file.
+- Python 3.11+ (the default run is standard-library only and needs no Azure resources)
+- For the live walkthrough only: an Azure subscription with Microsoft Foundry access.
+  Copy `.env.example` to `.env` and fill in your project endpoint; never commit a real
+  `.env` file.
 
 ## How to run
 
 ```bash
-pip install -r requirements.txt --break-system-packages
 python main.py
 ```
-
-See the inline comments in the code for the concept-to-code mapping referenced from the
-manuscript.
 
 ## Versions
 
 | Package | Version | Last verified |
 |---|---|---|
-| _(fill in before publishing)_ | | 2026-07 |
+| Python (standard library only, default run) | 3.11+ (tested on 3.14.0) | 2026-07-19 |
+| Foundry Agent Service agent memory | public preview | 2026-07-19 (status check) |
 
 ## Scope note
 
-Per the book's repo conventions: this folder contains the full runnable implementation,
-including error handling, retries, and logging that the manuscript's inline snippet omits
-for brevity. If you're looking for the short version that matches the book's printed code
-block, check that chapter's text first — this is the "make it actually run" version.
+Per the book's repo conventions: this folder accompanies the chapter's "On Azure" sidebar
+— it is a decision and mapping guide, not a hosted-service demo, because the underlying
+feature was in preview at time of writing. The build-it-yourself counterpart the chapter's
+inline snippet excerpts lives in `../minimal-tiered-memory/`.

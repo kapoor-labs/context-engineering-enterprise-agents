@@ -1,3 +1,5 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
+# Standard library only - no third-party dependencies for the default run.
+# If you wire in a real embedding/extraction model or the Foundry SDK (see README),
+# pin exact versions here before publishing, e.g.:
+# azure-ai-projects==
 # anthropic==

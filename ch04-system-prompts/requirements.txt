@@ -1,3 +1,1 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
-# anthropic==
+pytest==8.2.2

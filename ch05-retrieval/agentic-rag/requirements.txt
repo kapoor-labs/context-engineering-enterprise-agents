@@ -1,3 +1,5 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
+# Standard library only - no third-party dependencies for the default run.
+# If you wire in a real embedding model / model provider (see README), pin exact
+# versions here before publishing, e.g.:
 # anthropic==
+# python-dotenv==
