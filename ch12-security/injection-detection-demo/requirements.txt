@@ -1,3 +1,7 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
-# anthropic==
+# Chapter 12 — defensive layers (marking untrusted content + memory-write gate).
+#
+# Dependency-free: the demo and tests run on the Python standard library alone.
+# There is nothing to pip install.
+#
+# A production version might add a classifier model or a platform prompt-shield
+# in front of the regex detector (as an additional layer, never as the only one).
