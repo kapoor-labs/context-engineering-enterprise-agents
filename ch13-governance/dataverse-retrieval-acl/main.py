@@ -175,7 +175,9 @@ def _cols(results: list[dict], rec_id: str) -> list[str]:
 def run_demo() -> None:
     print("Chapter 13 - retrieval-time access control, provenance, audit\n")
     layer = build_layer()
-    first_line = Identity("csa:anjali-firstline", {"csa.read"})
+    # A generic first-line CSA (Anjali, canonically a senior CSA, would carry a
+    # broader role — the point here is the *tier*, not the person).
+    first_line = Identity("csa:first-line", {"csa.read"})
     fraud = Identity("investigator:maria", {"csa.read", "csa.fraud"})
 
     q = "everything on order NW-6612480"

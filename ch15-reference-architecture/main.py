@@ -114,7 +114,7 @@ def run_assembled_contact(mods) -> dict:
 
     # 2. Governed retrieval (Ch. 13): on-behalf-of the operator, row/col-scoped.
     layer = ch13.build_layer()
-    operator = ch13.Identity("csa:anjali", {"csa.read"})
+    operator = ch13.Identity("csa:first-line", {"csa.read"})
     hits = layer.retrieve("everything on order NW-6612480", operator)
     cols = sorted(hits[0]["fields"]) if hits else []
     trace.append(f"[retrieval    | Ch.13] on-behalf-of {operator.name}: "
