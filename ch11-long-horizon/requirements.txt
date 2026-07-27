@@ -1,3 +1,10 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
-# anthropic==
+# Chapter 11 — session continuity across a long-horizon investigation.
+#
+# Dependency-free: the demo and tests run on the Python standard library alone.
+# There is nothing to pip install.
+#
+# A production version would persist the durable store to Dataverse and schedule
+# session resumption (e.g. Power Automate / an orchestration timer), e.g.:
+#
+#   azure-identity
+#   (a Dataverse client of your choice)
