@@ -1,0 +1,11 @@
+# Chapter 13 — retrieval-time access control, provenance, and audit.
+#
+# Dependency-free: the demo and tests run on the Python standard library alone.
+# There is nothing to pip install.
+#
+# The production equivalent runs against Dataverse (row/column security under
+# on-behalf-of identity). Idiomatically that's C# with the Dataverse SDK; a
+# Python client would use, e.g.:
+#
+#   azure-identity
+#   (a Dataverse Web API client of your choice)
