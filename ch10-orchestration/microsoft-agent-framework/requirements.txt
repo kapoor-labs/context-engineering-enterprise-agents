@@ -1,0 +1,9 @@
+# Chapter 10 — Northwind flow on Microsoft Agent Framework.
+#
+# The offline mapping (agent_framework_flow.py -> describe_mapping) needs nothing
+# but the standard library. Adapting the illustrative sketch into a live workflow
+# needs the framework SDK and a model endpoint. Names/versions move fast — verify
+# against the current package before pinning.
+#
+#   agent-framework            # verify current package name + version
+#   azure-identity             # for Foundry Agent Service auth, if used

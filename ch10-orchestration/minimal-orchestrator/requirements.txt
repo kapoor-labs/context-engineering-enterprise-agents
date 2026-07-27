@@ -1,0 +1,5 @@
+# Chapter 10 — minimal orchestrator (build it yourself first).
+#
+# Dependency-free: the demo and tests run on the Python standard library alone.
+# There is nothing to pip install. The production equivalent is the sibling
+# microsoft-agent-framework/ folder, which uses the real framework SDK.
