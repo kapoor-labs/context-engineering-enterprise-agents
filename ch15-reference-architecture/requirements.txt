@@ -1,0 +1,8 @@
+# Chapter 15 — the assembled reference architecture.
+#
+# Dependency-free: the assembly composes the sibling chapter modules (ch10, ch13,
+# ch14) and runs on the Python standard library alone. There is nothing to pip
+# install. Run from within a clone of the repo so the sibling folders are present.
+#
+# A production build of Architecture 2/3 targets the managed stack (Foundry Agent
+# Service, Foundry IQ, Dataverse, Purview) — see each source chapter's folder.
