@@ -1,3 +1,10 @@
-# Pin exact versions here before publishing.
-# python-dotenv==
-# anthropic==
+# Chapter 14 — evaluating context quality.
+#
+# Dependency-free: the demo and tests run on the Python standard library alone.
+# There is nothing to pip install.
+#
+# A production practice would add OpenTelemetry tracing and a real eval runner,
+# e.g.:
+#
+#   opentelemetry-sdk
+#   azure-ai-projects   # Foundry tracing/evaluations
